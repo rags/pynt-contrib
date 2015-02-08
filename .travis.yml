@@ -1,0 +1,11 @@
+language: python
+python:
+  - "2.7"
+  - "3.2"
+  - "3.3"
+#  - "pypy"  #module level vars in tests are not mutable in pypy?
+
+script: 
+  - py.test
+
+  

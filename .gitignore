@@ -1,0 +1,10 @@
+*.pyc
+apidocs
+MANIFEST
+dist
+.project
+build
+.pydevproject
+.ropeproject
+*.out
+pynt.egg-info
