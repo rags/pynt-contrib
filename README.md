@@ -12,7 +12,7 @@ A collection of common pynt tasks
 * Ivan Ven Osdel
 
 
-If you want to make changes the repo is at https://github.com/rags/pynt-contrib. You will need [pytest](http://www.pytest.org) to run the tests
+If you want to make changes the repo is at https://github.com/rags/pynt-contrib. You will need [pytest](http://www.pytest.org) and mock to run the tests
 
 ```bash
 $ ./b t
