@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rags/pynt-contrib.png?branch=master)](https://travis-ci.org/rags/pynt)
+[![Build Status](https://travis-ci.org/rags/pynt-contrib.png?branch=master)](https://travis-ci.org/rags/pynt-contrib)
 
 A collection of common pynt tasks
 =================================
