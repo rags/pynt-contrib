@@ -66,8 +66,8 @@ build.py	build.pyc
 ```
 
 pynt-contrib currently has
-* execute: A utility ``task`` to execute os commands
-* safe_cd: A utility to safely change the context to a given directory
+* execute: A ``task`` to execute os commands
+* safe_cd: An utility function to safely change the context to a given directory
 
 ## Contributors/Contributing
 
