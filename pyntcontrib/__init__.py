@@ -26,10 +26,7 @@ def safe_cd(path):
 @task()
 def execute(script, *args):
     """
-    Executes a command through the shell. Spaces should breakup the args.
-
-    Usage:
-    >>> execute('grep', 'TODO', '*')
+    Executes a command through the shell. Spaces should breakup the args. Usage: execute('grep', 'TODO', '*')
     """
 
     popen_args = [script] + list(args)

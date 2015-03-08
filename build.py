@@ -31,7 +31,7 @@ def upload():
     env['PYTHONPATH']= "./pynt"
     print(env)
     #    subprocess.call(['ssh-add', '~/.ssh/id_rsa'])
-    pipe=subprocess.Popen(['python', 'setup.py', 'sdist', 'bdist_wininst'], env=env)
+    pipe=subprocess.Popen(['python', 'setup.py', 'sdist','upload'], env=env)
     pipe.wait()
 
 __DEFAULT__ = test
