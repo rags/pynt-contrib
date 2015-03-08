@@ -65,8 +65,8 @@ build.py	build.pyc
 [ build.pyc - Completed task "pwd_ls" ]
 ```
 
-pyntcontrib currently has
-* execute: A utility task to execute os commands
+pynt-contrib currently has
+* execute: A utility ``task`` to execute os commands
 * safe_cd: A utility to safely change the context to a given directory
 
 ## Contributors/Contributing
