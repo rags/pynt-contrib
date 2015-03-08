@@ -42,7 +42,7 @@ def pwd_ls(dir="/tmp"):
 __DEFAULT__ = pwd_ls
 ```
 
-**Running pynt tasks**
+**Using pynt contrib**
 -----------------------
 
 The command line interface and help is automatically generated. Task descriptions
@@ -64,7 +64,17 @@ $ pynt "pwd_ls[/tmp/foo]"
 build.py	build.pyc
 [ build.pyc - Completed task "pwd_ls" ]
 ```
-
+Note that execute is included as a task in the build scripts as a task automatically when its imported from pynt-contrib. So you can use it as any other task
+```bash
+$ pynt "execute[ls,-la]"
+[ build.pyc - Starting task "execute" ]
+total 16
+drwxr-xr-x  4 raghunr  wheel  136 Mar  8 22:15 .
+drwxrwxrwt  9 root     wheel  306 Mar  8 22:56 ..
+-rwxr-xr-x  1 raghunr  wheel  258 Mar  8 22:14 build.py
+-rw-r--r--  1 raghunr  wheel  479 Mar  8 22:15 build.pyc
+[ build.pyc - Completed task "execute" ]
+```
 pynt-contrib currently has
 * execute: A ``task`` to execute os commands
 * safe_cd: An utility function to safely change the context to a given directory
