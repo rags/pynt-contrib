@@ -2,15 +2,9 @@ import contextlib
 import os
 from subprocess import check_call, CalledProcessError
 import sys
-
-__version__ = "0.1.0"
+from pynt import task
 __license__ = "MIT License"
 __contact__ = "http://rags.github.com/pynt-contrib/"
-
-
-def _print(value):
-    print(value)
-
 
 @contextlib.contextmanager
 def safe_cd(path):
@@ -29,7 +23,7 @@ def safe_cd(path):
     finally:
         os.chdir(starting_directory)
 
-
+@task()
 def execute(script, *args):
     """
     Executes a command through the shell. Spaces should breakup the args.
@@ -47,3 +41,6 @@ def execute(script, *args):
     except Exception as ex:
         _print('Error: {} with script: {} and args {}'.format(ex, script, args))
         sys.exit(1)
+
+def _print(*args):
+    print(args)

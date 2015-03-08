@@ -2,7 +2,7 @@ from subprocess import CalledProcessError
 import unittest
 import mock
 
-from ...contrib import execute
+from .. import execute
 
 __version__ = "0.1.0"
 __license__ = "MIT License"
@@ -11,9 +11,9 @@ __contact__ = "http://rags.github.com/pynt-contrib/"
 
 class TestExecute(unittest.TestCase):
 
-    @mock.patch('pynt.contrib.check_call')
-    @mock.patch('pynt.contrib._print')
-    @mock.patch('pynt.contrib.sys.exit')
+    @mock.patch('pyntcontrib.check_call')
+    @mock.patch('pyntcontrib._print')
+    @mock.patch('pyntcontrib.sys.exit')
     def test_successful_command(self, mock_exit, mock_print_, mock_check_call):
         """A successful command should not exit"""
         execute('python', '-V')
@@ -22,9 +22,9 @@ class TestExecute(unittest.TestCase):
         self.assertFalse(mock_print_.called)
         self.assertTrue(mock_check_call.called)
 
-    @mock.patch('pynt.contrib.check_call')
-    @mock.patch('pynt.contrib._print')
-    @mock.patch('pynt.contrib.sys.exit')
+    @mock.patch('pyntcontrib.check_call')
+    @mock.patch('pyntcontrib._print')
+    @mock.patch('pyntcontrib.sys.exit')
     def test_bad_command(self, mock_exit, mock_print_, mock_check_call):
         """A bad command should exit with the error code"""
         command = ['notatall', 'athing']

@@ -1,13 +1,13 @@
 from setuptools import setup
-from pynt import contrib
 setup(
     name="pynt-contrib",
-    version= contrib.__version__,
+    version= "0.0.3",
     author="Raghunandan Rao",
     author_email="r.raghunandan@gmail.com",
-    url= contrib.__contact__, 
-    packages=["pynt.contrib"],
+    url= "http://rags.github.com/pynt-contrib/", 
+    packages=["pyntcontrib"],
     license="MIT License",
     description="Common pynt tasks.",
-    long_description=open("README.rst").read()+"\n"+open("CHANGES.rst").read()
+    long_description=open("README.rst").read()+"\n"+open("CHANGES.rst").read(),
+    install_requires = ['pynt>=0.8.1']
 )

@@ -2,7 +2,7 @@ import os
 import tempfile
 import unittest
 
-from ...contrib import safe_cd
+from pyntcontrib import safe_cd
 
 __version__ = "0.1.0"
 __license__ = "MIT License"

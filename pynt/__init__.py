@@ -1,4 +1,0 @@
-"""
-Lightweight Python Build Tool
-"""
-

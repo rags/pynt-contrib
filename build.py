@@ -2,6 +2,7 @@
 
 import subprocess
 from pynt import task
+import os
 
 @task()
 def apidoc():
@@ -16,7 +17,7 @@ def test(*args):
     Run unit tests.
     """
     subprocess.call(["py.test-2.7"] + list(args))
-    subprocess.call(["py.test-3.3"] + list(args))
+    subprocess.call(["py.test-3.4"] + list(args))
 
 @task()
 def generate_rst():
@@ -25,7 +26,12 @@ def generate_rst():
 
 @task(generate_rst)
 def upload():
-    subprocess.call(['ssh-add', '~/.ssh/id_rsa'])
-    subprocess.call(['python', 'setup.py', 'sdist', 'bdist_wininst', 'upload'])
+    env=os.environ.copy()
+    print(env)
+    env['PYTHONPATH']= "./pynt"
+    print(env)
+    #    subprocess.call(['ssh-add', '~/.ssh/id_rsa'])
+    pipe=subprocess.Popen(['python', 'setup.py', 'sdist', 'bdist_wininst'], env=env)
+    pipe.wait()
 
 __DEFAULT__ = test
