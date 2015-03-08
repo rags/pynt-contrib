@@ -4,6 +4,7 @@ A collection of common pynt tasks
 =================================
 
 [Raghunandan Rao](https://github.com/rags)
+
 pynt-contrib has a collection of tasks and utilities for pynt. pynt-contrib allows pynt itself to continue to be simple, while enhancing it.
 ## Installation
 
