@@ -4,6 +4,7 @@ A collection of common pynt tasks
 =================================
 
 [Raghunandan Rao](https://github.com/rags)
+pynt-contrib has a collection of tasks and utilities for pynt. pynt-contrib allows pynt itself to continue to be simple, while enhancing it.
 ## Installation
 
 You can install pynt-contrib from the Python Package Index (PyPI) using pip (``pip install pynt-contrib``) or easy_install (``easy_install pynt-contrib``), or from source (``python setup.py install``)
