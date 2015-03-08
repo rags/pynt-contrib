@@ -32,8 +32,7 @@ __DEFAULT__ = pwd_ls
 **Using pynt contrib**
 -----------------------
 
-The command line interface and help is automatically generated. Task descriptions
-are extracted from function docstrings.
+Listing the tasks in build.py
 
 ```bash
 $ pynt -l
