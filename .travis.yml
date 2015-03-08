@@ -6,6 +6,7 @@ python:
 #  - "pypy"  #module level vars in tests are not mutable in pypy?
 
 script: 
+  - pip install pynt
   - py.test
 
   
