@@ -6,20 +6,7 @@ A collection of common pynt tasks
 [Raghunandan Rao](https://github.com/rags)
 ## Installation
 
-
-You can install pynt from the Python Package Index (PyPI) or from source.
-
-Using pip
-
-```bash
-$ pip install pynt-contrib
-```
-
-Using easy_install
-
-```bash
-$ easy_install pynt-contrib
-```
+You can install pynt-contrib from the Python Package Index (PyPI) or from source. Using pip (``pip install pynt-contrib``) or easy_install (``easy_install pynt-contrib``)
 
 ## Example
 
