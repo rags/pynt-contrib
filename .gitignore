@@ -7,5 +7,6 @@ build
 .pydevproject
 .ropeproject
 *.out
-pynt.egg-info
+pynt*.egg-info
 .idea
+README.rst
