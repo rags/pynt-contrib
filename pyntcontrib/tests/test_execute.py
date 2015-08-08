@@ -73,3 +73,25 @@ class TestExecute(unittest.TestCase):
         self.assertIn('--before-context=5', actual_call_args[-2:])
         self.assertIn('--after-context=3', actual_call_args[-2:])
 
+    @mock.patch('pyntcontrib.check_call')
+    @mock.patch('pyntcontrib._print')
+    @mock.patch('pyntcontrib.sys.exit')
+    def test_command_with_nonstring_kwargs(self, mock_exit, mock_print_, mock_check_call):
+        """
+        Execute kwargs should still work with non-string keys/values.
+        """
+
+        args = ['grep','-r', 'needle', '/tmp']
+        kwargs = {
+            '--before-context': 5,
+            '--after-context': 3,
+        }
+        execute(*args, **kwargs)
+
+        self._assert_successful_call(mock_exit, mock_print_, mock_check_call)
+        actual_call_args = [arg for arg in mock_check_call.call_args[0][0]]
+        self.assertListEqual(actual_call_args[:-2], args)
+        # No guaranteed order so lets just check for the converted ones
+        self.assertIn('--before-context=5', actual_call_args[-2:])
+        self.assertIn('--after-context=3', actual_call_args[-2:])
+

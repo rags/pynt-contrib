@@ -48,7 +48,7 @@ def execute(script, *args, **kwargs):
 
 
 def _kwargs_to_execute_args(kwargs):
-    args = ['='.join([key, value]) for key, value in kwargs.items()]
+    args = ['='.join([str(key), str(value)]) for key, value in kwargs.items()]
     return args
 
 
