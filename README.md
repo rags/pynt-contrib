@@ -71,7 +71,7 @@ pynt-contrib currently has
 
 
 * Ivan Ven Osdel
-
+* Matthew Dean Martin
 
 If you want to make changes the repo is at https://github.com/rags/pynt-contrib. You will need [pytest](http://www.pytest.org) and mock to run the tests
 

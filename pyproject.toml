@@ -27,6 +27,9 @@ packages = [
 ]
 include = [
     "pyntcontrib/**/*.py",
+    "LICENSE.txt",
+    "README.md",
+    "CHANGES.rst",
 ]
 exclude = [
 ]
