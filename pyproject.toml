@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "pynt-contrib"
+version = "0.2.0"
+description = "Common pynt tasks."
+authors = [
+    "Raghunandan Rao <r.raghunandan@gmail.com>",
+    "Matthew Martin <matthewdeanmartin@gmail.com>"
+]
+keywords = ["pynt", "build", "microbuild"]
+classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Software Development :: Libraries",
+]
+packages = [
+    { include = "pyntcontrib" },
+]
+include = [
+    "pyntcontrib/**/*.py",
+]
+exclude = [
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/rags/pynt-contrib"
+homepage = "https://github.com/rags/pynt-contrib"
+documentation = "https://github.com/rags/pynt-contrib"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/rags/pynt-contrib/issues"
+"Change Log" = "https://github.com/rags/pynt-contrib/blob/master/CHANGES.rst"
+
+[tool.poetry.scripts]
+
+
+[tool.poetry.dependencies]
+# per vermin's estimation
+python = ">=2.7 || >=3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "==6.0.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
